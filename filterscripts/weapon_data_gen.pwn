@@ -21,7 +21,7 @@ public OnFilterScriptInit()
 		return 1;
 	}
 
-	new File:FOut_Melee = fopen("weapon_data/temp/weapon_melee.pwn", io_write);
+	new File:FOut_Melee = fopen("weapon_data/temp_weapon_melee.pwn", io_write);
 
 	if(!FOut_Melee)
 	{
@@ -31,7 +31,7 @@ public OnFilterScriptInit()
 		return 1;
 	}
 
-	new File:FOut_Guns = fopen("weapon_data/temp/weapon_guns.pwn", io_write);
+	new File:FOut_Guns = fopen("weapon_data/temp_weapon_guns.pwn", io_write);
 
 	if(!FOut_Guns)
 	{
@@ -172,7 +172,7 @@ public OnFilterScriptInit()
 	{
 		if(strcmp(text, "$WEAPON_MELEE$", true, strlen("$WEAPON_MELEE$")) == 0)
 		{
-			new File:FIn2 = fopen("weapon_data/temp/weapon_melee.pwn");
+			new File:FIn2 = fopen("weapon_data/temp_weapon_melee.pwn");
 
 			while(fread(FIn2, text))
 				fwrite(FOut, text);
@@ -183,7 +183,7 @@ public OnFilterScriptInit()
 		}
 		else if(strcmp(text, "$WEAPON_GUNS$", true, strlen("$WEAPON_GUNS$")) == 0)
 		{
-			new File:FIn2 = fopen("weapon_data/temp/weapon_guns.pwn");
+			new File:FIn2 = fopen("weapon_data/temp_weapon_guns.pwn");
 
 			while(fread(FIn2, text))
 				fwrite(FOut, text);
