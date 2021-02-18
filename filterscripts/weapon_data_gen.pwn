@@ -201,6 +201,9 @@ public OnFilterScriptInit()
 	fclose(FOut);
 	fclose(FIn);
 
+	fremove("weapon_data/temp_weapon_melee.pwn");
+	fremove("weapon_data/temp_weapon_guns.pwn");
+
 	return 1;
 }
 
@@ -216,3 +219,5 @@ CheckDefinition(const type[])
 
 	return 1;
 }
+
+// EOF
