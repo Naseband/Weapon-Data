@@ -8,6 +8,4 @@ Load the weapon_data_gen filterscript.
 
 The final include will be located in ```scriptfiles/weapon_data/weapon_data.inc```
 
-The temp_ files will contain only the array data which can be deleted afterwards.
-
 In the input folder you can edit weapon_base.pwn if you need to make changes to the main include functions.
